@@ -5,12 +5,12 @@ import { showCarts, createCart, updateCart, deleteCart} from '../controllers/car
 const router: Router = express.Router();
 
 //GET Carts
-router.get('/getAllCarts', showCarts);
+router.get('/showCarts', showCarts);
 //POST Cart
-router.post('/addCart', createCart);
+router.post('/createCart', createCart);
 // //UPDATE Carts
-router.put('/updateCart/:productId', updateCart)
+router.put('/updateCart/:propertyId', updateCart)
 // // DELETE Carts
-router.delete('/deleteCart/:productId', deleteCart);
+router.delete('/deleteCart/:propertyId', deleteCart);
 
 export default router;

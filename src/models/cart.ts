@@ -1,9 +1,9 @@
 import { ObjectId } from "mongodb";
-import { Entity, Column, ObjectIdColumn, OneToOne, JoinColumn, ManyToOne } from "typeorm";
+import { Entity, Column, ObjectIdColumn, OneToOne, JoinColumn, ManyToOne,BaseEntity } from "typeorm";
 import { Dashboard } from "../models/dashboard";
 
 @Entity("carts")
-export class Cart {
+export class Cart extends BaseEntity {
     @ObjectIdColumn()
     _id: ObjectId = new ObjectId(); // This line looks fine
 
