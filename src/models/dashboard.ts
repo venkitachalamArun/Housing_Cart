@@ -2,12 +2,22 @@
 import { ObjectId } from "mongodb";
 import { Column, Entity, ObjectIdColumn, OneToMany } from "typeorm";
 import { Cart } from "./cart";
+import {
+  IsDate,
+  IsEmail,
+  Length,
+  MaxLength,
+  MinLength,
+  Validate,
+  ValidationArguments,
+} from "class-validator";
 @Entity("dashboard")
 export class Dashboard {
     @ObjectIdColumn()
     _id: ObjectId = new ObjectId;
     id!: number;
     @Column()
+    @Length(10, 20)
     propertyname!: string;
     @Column()
     bhktype!: string;
